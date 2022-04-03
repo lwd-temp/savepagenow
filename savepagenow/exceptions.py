@@ -29,12 +29,18 @@ class Forbidden(WaybackRuntimeError):
 
 
 class TooManyRequests(WaybackRuntimeError):
-    """Raised when archive.org when you have exceeded its throttle on request frequency. The site will only archive a URL 10 times a day."""
+    """Raised when archive.org when you have exceeded its throttle on request frequency.
+
+    The site will only archive a URL 10 times a day via Save Page Now. This is likely the limit you've exceeded.
+    """
 
     pass
 
 
 class UnknownError(WaybackRuntimeError):
-    """Raised when archive.org when you receive a 520 unknown status code in response to your request."""
+    """Raised when archive.org when you receive a 520 unknown status code in response to your request.
+
+    This is likely caused by the target site refusing the connection from the archive.org crawler.
+    """
 
     pass
