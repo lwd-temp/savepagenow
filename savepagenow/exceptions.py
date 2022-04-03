@@ -29,7 +29,7 @@ class Forbidden(WaybackRuntimeError):
 
 
 class TooManyRequests(WaybackRuntimeError):
-    """Raised when archive.org when you have exceeded its throttle on request frequency. Slow it down."""
+    """Raised when archive.org when you have exceeded its throttle on request frequency. The site will only archive a URL 10 times a day."""
 
     pass
 
